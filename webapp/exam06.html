@@ -2,14 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 
 <body>
-	<p id="p1"> abcdefghijklmn </p>
-	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
+	
+	<h1>while</h1>
+	
+	<script type="text/javascript">
+	
+		var num = 1;
+		
+		while (true) {
+			
+			if(num%6==0 && num%14==0){
+				console.log(num);
+				console.log("안녕\n하세요");		//안좋은 코드임
+				document.write(num);
+				document.write("안녕<br>하세요");	//안좋은 코드임
+				break;				
+			}
+				
+			num++;		//num = num + 1;
+		}
+	
+	</script>
+	
 </body>
 	
 

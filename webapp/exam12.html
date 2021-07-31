@@ -2,13 +2,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
-<style>
-	.red {color: red;}
-	
-	.blue {color: blue;}
-
-</style>
 
 
 <title>Insert title here</title>
@@ -16,13 +9,84 @@
 
 <body>
 
-	이름:<input type="text" name="name" /><br>
-	비밀번호:<input type="password" name="password" /><br>
-	<textarea name="content"></textarea>
-	<br><br>
-	이름2:<input type="text" name="name2" value="홍길동"/><br>
-	비밀번호2:<input type="password" name="password2" value="1234"/><br>
-	<textarea name="content2">산토끼토끼야</textarea>
+	<h1>배열</h1>
+
+	<script type="text/javascript">
+		console.log("=================배열===========================")
+	
+	
+		/*
+		var array = [];   //가장 많이 쓰임
+		
+		array[0] = 1;
+		array[1] = 2.5
+		array[2] = "안니영";
+		array[4] = "hello!!!!!";
+		
+		console.log(array);   //toString 처럼 전체 찍어보는거임.
+		console.log(array[0]);
+		console.log(array[1]);
+		console.log(array[2]);
+		console.log(array[3]);   //값이 없기 때문에 undefined 라고 나옴
+		console.log(array[4]);   //[3] 은 비어있으니까 건너뛰고 empty라고 되어있음 신기함.
+		
+		
+		console.log("--------------------------------");
+		 */
+
+		 
+		 /*
+		//조금 다른 케이스 (배열에 값을 미리 넣어둠)      
+		var array01 = [ 273, 32, 1.5, "안니영" ];
+
+		console.log(array01);
+
+		array01[4] = 52;
+		console.log(array01);
+
+		array01.push(100);		//배열에 맨 마지막에 값을 추가한다.
+		console.log(array01);
+
+		array01[3] = 50;
+		console.log(array01);
+		
+		array01.pop();		//배열에 맨마지막 값을 지울때 쓴다.
+		console.log(array01);
+		
+		
+		for(var i = 0; i < array01.length; i++) {
+			console.log(array01[i])
+		}
+		*/
+		
+		var sum2 = function () {	//익명함수는 위치가 중요하다!
+			return 3+4;
+		}
+		
+		
+		var array02 = [273, 1.5, "안녕", 3>2, sum, sum2, function(){return "익명함수";}, [11,12,13]];
+		
+		console.log(array02[0]);
+		console.log(array02[1]);
+		console.log(array02[2]);
+		console.log(array02[3]);
+		console.log(array02[4](3, 5));		//쓰는 방법 --> 실행은 [] 뒤에 ()
+		console.log(array02[5]());
+		console.log(array02[6]());
+		console.log(array02[7][0]);
+		console.log(array02[7][1]);
+		console.log(array02[7][2]);
+		
+		
+		//기명함수  -- > 위치 상관없이 먼저 찾아서 정의된다.
+		function  sum(a,b) {
+			return a+b;
+		}
+		
+		
+		
+		
+	</script>
 	
 </body>
 	

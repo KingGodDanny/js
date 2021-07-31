@@ -2,16 +2,93 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
-	<div>
-		<input id="btn" type="button" VALUE="js테스트버튼" />
-		<h1 id="display">이름출력영역</h1>
-	</div>
+
+	<h1>객체</h1>
+
 
 </body>
+
+<script type="text/javascript">
+
+	//  < 자바스크립트에서 객체 만드는 방법	>
+	var guestbookVo = {
+		name: "대니조", 
+		password: "1234",
+		content: "안녕하세요",	
+		showInfo: function() {
+						console.log(this.name + ", " + this.password + ", " + this.content)
+					}
+	};
+
+	console.log(guestbookVo.name);
+	console.log(guestbookVo.password);
+	console.log(guestbookVo.content);
+	guestbookVo.showInfo();			//이미 위에서 실행을 하는 콘솔을 만들어놧기때문에 이렇게 쓰면 출력된다.
+	
+	
+	var teacher = guestbookVo.name;
+	console.log(teacher);
+	
+	var teacher2 = guestbookVo["name"];		//이렇게 써있는 문법도 있기떄문에 알아둘것.
+	console.log(teacher2);
+	
+	
+	//guestbookVo.name(); 	// 이 코드는 함수가 아님, 이렇게 쓸수없음 
+ 	
+	
+	console.log("===========================================");
+	
+	var person01 = {
+			name : "대니조",
+			hp : "010-1111-1111",
+			company : "02-555-5555"
+	};
+	
+	
+
+	var person02 = {
+			name : "원년최",
+			hp : "010-2222-2222",
+			company : "02-333-3333"
+	};
+	
+	
+	
+	var person03 = {
+			name : "리효이",
+			hp : "010-3333-3333",
+			company : "02-222-2222"
+	};
+	
+	
+// 	var personList = [person01, person02, person03];
+
+	var personList2 = [];
+	personList2[0] = person01;
+	personList2[1] = person02;
+	
+	
+	personList2.push(person03);
+	console.log(personList2);
+
+	
+// 	personList2.pop();
+// 	console.log(personList2);
+	
+	
+	for(var i=0; i<personList2.length; i++) {
+		console.log(personList2[i].name);
+		console.log(personList2[i].hp);
+	}
+	
+	
+	
+	
+	
+</script>
 
 
 

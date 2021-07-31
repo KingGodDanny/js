@@ -2,20 +2,97 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 	
-	<ul>
-		<li id="first" class="red">첫번째 아이템입니다.</li>
-		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
-		<li id="third" class="del">세번째아이템입니다.</li>
-		<li><strong>네번째 아이템입니다.</strong></li>
-		
-	</ul>
+	<h1>이벤트</h1>
+	
+	
+	<h2>h2태그_1</h2>
+	<h2>h2태그_2</h2>
+	<h2>h2태그_3</h2>
+	
+	<h3 class="tagh3">h3태그_1</h3>
+	<h3 class="tagh3">h3태그_2</h3>
+	<h3 class="tagh3">네이버</h3>
+	<h3 class="tagh3">다음</h3>
+	
+	
+	<div>
+		<button id="btn">자바스크립트 테스트 버튼</button>
+		<p id="display">이름 출력영역</p>
+	</div>
+
+
+
 
 </body>
+
+
+	<script type="text/javascript">
+	
+		
+		//밑에 기능은 위에 HTML같은 모든 문서가 로딩된후 function () 아래의 내용이 실행되라.
+		window.onload = function () {	
+			
+			//id로 가져오기
+			var testButton = document.getElementById("btn");			//html태그를 아이디로 가져오는 방법임
+			var testArea = document.getElementById("display");
+			
+				
+			//HTML Tag로 가져오기 (엘리먼트에 s붙이기)
+			var h2Array = document.getElementsByTagName("h2");
+			console.log(h2Array);
+			
+			//클래스로 가져오기
+			var h3Array = document.getElementsByClassName("tagh3");
+			console.log(h3Array);
+			
+			//id가 "btn"인 버튼을 클릭할때 function()에 정의된 대로 작동해라
+			testButton.onclick = function(){
+				testArea.innerHTML = "대니조";
+				//btn이라고 되있는 id를 testButton에 올린다.
+				//testButton에 .onclick = function()로 정의를 해놓고 
+				//그 안에 testArea.innerHTML = "대니조"; 넣은후 웹페이지에서 (자바스크립트 테스트 버튼) 누르면 
+				//이름 출력영역으로 된곳이 대니조로 바뀐다.
+			};
+			
+			
+			
+			//h2태그의 2번째를 클릭할 때  function()에 정의된 대로 작동해라
+			console.log(h2Array[1]);
+			 h2Array[1].onclick = function() {
+		         testArea.innerHTML = "정우성";
+
+			};
+			
+			
+						
+			//문제 : h3태그(다음)을 클릭하면 h1태그에 다음주소를 출력한다.
+			//		-h1태그를 변수에 담는다
+			var h1tag = document.getElementsByTagName("h1");	
+			console.log(h1tag);
+			
+			
+			// 		-h3태그(다음)에 click이벤트 정의
+			h3Array[3].onclick = function() {
+				h1tag[0].innerHTML = '<a href="http://www.daum.net" target="_blanck">https://daum.net';   //"" '' 사용해서 구분.
+		      };
+
+			
+			
+		
+			
+				
+			
+		};
+	
+	
+	
+	
+	</script>
+
 
 
 

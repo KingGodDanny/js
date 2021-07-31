@@ -2,26 +2,43 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 
 <body>
-	<ul>
-		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-	</ul>
+	<h1>switch문 예제</h1>
+
+	<script type="text/javascript">
+	
+		var code = prompt();
+		console.log(typeof code);		//String 
+		
+	
+		switch(code) {
+			case String(1) :		//그냥 1일땐 상담원이 출력된다.
+				console.log("R01호");
+				document.write("R01호");
+				break;
+			case "2" :
+				console.log("R02호");
+				document.write("R02호");
+				break;
+			case "3" :
+				console.log("R03호");
+				document.write("R03호");
+				break;
+			case "4" :
+				console.log("R04호");
+				document.write("R04호");
+				break;
+			default :
+				console.log("상담원");
+				document.write("상담원");
+			}		
+	
+	</script>
+	
 </body>
 	
 

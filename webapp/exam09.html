@@ -2,21 +2,64 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 
 <body>
+	<script type="text/javascript">
+		//이름이 있는 함수(기명함수, 선언적함수)   ----정의부터 해석된다.
+		
+		
+		var plusSum = plus(3, 5);
+		console.log(plusSum);
+		
+		
+		var result = plus(2.7, 5.8);
+		console.log(result);
+		
+		var result02 = plus("안녕", "하세요");
+		console.log(result02);
+	
+		
+		
+		//함수 정의   -->  이런 메소드함수가 밑으로 내려와도 이런 정의가 먼저 해석된다.
+		function plus(a, b) {
+			var sum = a + b;
+			
+			return sum;
+		}
+		
+		
+		
+		//이름이 없는 함수(익명함수)  -이름이 없는 메소드기때문에 만들자마자 사용한다.
+		var minus = function (a, b) {	//익명함수는 맨 아래로 갈경우 minus라는 변수는 순서대로 
+			var sum = a - b;			//실행되는것이기때문에 오류난다.
+			return sum;					//재사용을 위해 변수에 할당해서 사용  --> 변수는 위에서 실행  --> 함수가 변수에 할당 된후 사용가능
+			
+		}
+		console.log(typeof munus);  //function
+		
+		
+		var result03 = minus(5,4);
+		console.log(result03);
+		
+		
+		var result04 = minus(5, 2.4)
+		console.log(result04);
+		
+		
+		var result05 = minus("안녕", "하세요");
+		console.log(result05);
+		
+		
+		
+		
+		
+// 		document.write(plusSum);
+	</script>
 
-	<ul>
-		<li>첫번째 아이템입니다.</li>
-		<li>두번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
-		<li>네번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
-		<li>다섯 번째 아이템입니다.</li>
-	</ul>
+
 
 </body>
 	
