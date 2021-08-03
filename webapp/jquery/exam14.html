@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+
+</body>
+
+<script type="text/javascript">
+	
+	/*	1억개라고 생각하면 하나하나 만드는건 좋지않음
+	$("#first").on("click", function(){
+		console.log("id=first 클릭");
+		
+	});
+
+	$("#second").on("click", function(){
+		console.log("id=second 클릭");
+	})
+	*/
+
+	 $("li").on("click", function(){
+         /*
+         console.log("li 버튼클릭");
+         
+         var $that = $(this);   //li중 클릭한 부분만 인식함 -> 위에 p태그는 인식하지 못함   관례적으로 변수명은 $this나 $that쓰기도 함   
+                  //현재 이벤트는 click이므로 클릭만 적용됨.
+         console.log($that);
+         
+         $that.html("<strong>대니조</strong>");
+         */
+         
+                  
+         $(this).text("홍길동");   
+	 });
+	 
+   
+	$("li").on("dblclick", function() {
+         var str = $(this).attr("id");
+         console.log(str);
+		
+	})
+
+
+
+</script>
+
+
+</html>

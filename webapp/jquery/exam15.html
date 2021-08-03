@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+	<button id="btn" type="button" >li추가</button>
+</body>
+
+<script type="text/javascript">
+	
+	//li추가 버튼 클릭했을때
+	$("#btn").on("click", function(){
+		console.log("버튼 클릭");
+		
+		$("ul").append("<li id='five'>다섯번째아이템입니다.</li>");
+		$("ul").append("<li id='six'>여섯번째아이템입니다.</li>");
+		$("ul").append("<li id='seven'>일곱번째아이템입니다.</li>");
+		
+	});
+
+	/*
+	$("li").on("click", function() {
+		console.log("li태그 클릭");
+		var $this = $(this);
+		console.log($this);
+		
+	});
+	*/
+	
+	//새로 추가될 li에는 버튼 적용이 안되니깐
+	//li의 부모인 ul에다가 이벤트를 걸고 li를 추가했을때 적용되게끔
+	//밑에 클릭, 리, 펑션으로 할수있다.
+	//근데 추가될 li가 없고 딱 정해진 세팅이라면 굳이 ul에 이벤트를 걸필요가없다.
+	$("ul").on("click", "li", function() {
+		console.log("li태그 클릭");
+		var $this = $(this);
+		console.log($this);
+		$(this).text("대니조");
+		
+	});
+
+
+</script>
+
+
+
+
+</html>
